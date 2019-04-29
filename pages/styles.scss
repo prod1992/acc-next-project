@@ -15,6 +15,14 @@ body {
   justify-content: center
 }
 
+.acc-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .acc-hero--video {
   position: fixed;
   right: 0;
@@ -37,8 +45,27 @@ body {
   width: 290px;
   height: 100%;
   z-index: 9;
+  transform: translate(-100%, 0);
+  transition: 0.2s transform ease-in-out;
+  ul {
+    list-style: none;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    padding: 0 20%;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  li {
+    margin: 35px 0;
+  }
   @media(min-width: 768px) {
     width: 420px;
+  }
+  .acc-nav--open & {
+    transform: translate(0, 0);
   }
 }
 
@@ -51,6 +78,7 @@ body {
   background-color: #DDC624;
   z-index: 10;
   border: none;
+  cursor: pointer;
   > span {
     height: 2px;
     width: 44px;
